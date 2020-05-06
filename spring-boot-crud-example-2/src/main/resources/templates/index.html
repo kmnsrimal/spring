@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<style>
-
-body{
-	background-color: blue;
-}
-
-h1{
-	color:white;
-	text-align:center
-	
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-li a {
-  display: block;
-  width: 60px;
-  background-color: #dddddd;
-}
-</style>
-
-
 <meta charset="UTF-8">
 <title>Product</title>
+<link href="css/index.css"
+        rel="stylesheet">
 </head>
 
 <body>
 
-<h1>THIS IS MY FIRST SPRINGBOOT WEBSITE</h1>
-<ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-</ul>
+
+<div class= "wrapper">
+     <div class="top-bar clearfix ">
+           <div class="top-bar-links">
+                <ul>
+                      <li><a href="#home">Home</a></li>
+                      <li><a href="#news">News</a></li>
+                      <li><a href="#contact">Contact</a></li>
+                      <li><a href="#about">About</a></li>
+               </ul>
+           </div>
+           
+           <div class="site-search">
+                <form method="get" action="index.html">
+                      <input type="search" name="search-box">
+                      <button class ="button" name = "btn" type="submit">Search</button>  
+                </form>
+           </div>
+     
+     </div>
+
+</div>
+
 
 
 
