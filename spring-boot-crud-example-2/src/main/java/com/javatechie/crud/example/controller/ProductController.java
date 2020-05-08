@@ -2,13 +2,17 @@ package com.javatechie.crud.example.controller;
 
 import java.util.List;
 
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -17,15 +21,37 @@ import com.javatechie.crud.example.service.ProductService;
 
 
 
+
+
 @RestController
 public class ProductController {
+	
+	Logger logger = LoggerFactory.getLogger(ProductController.class);
 	
 	@Autowired
 	private  ProductService service;
 	
-	@PostMapping("/addproduct")
+	 @RequestMapping(value = "/index")
+	   public String index() {
+	      return "index";
+	   }
+	
+	
+	 
+//	@RequestMapping("/")
+//	public String viewHomePage(Model model) {
+////		List<Product>listProducts = service.listAll();
+//		model.addAttribute(model);
+//		
+//		return "Newindex";
+//	}
+//	
+	@PostMapping("/addProduct")
 	public Product addProduct(@RequestBody Product product) {
-        return service.saveProduct(product);
+		System.out.println("product");
+   
+		System.out.println("in product");
+		return service.saveProduct(product);
 	}  
 	
 	@PostMapping("/addProducts")
@@ -47,11 +73,11 @@ public class ProductController {
 	public Product findProductByName(@PathVariable String name) {
 		return service.getProductByName(name);
 	}
-//	
-//	@PutMapping("/update")
-//	public Product updateProduct(@RequestBody Product product) {
-//        return service.updateProduct( product);
-//	}  
+	
+	@PutMapping("/update")
+	public Product updateProduct(@RequestBody Product product) {
+        return service.updateProduct( product);
+	}  
 	
 	@DeleteMapping("/delete/{id}")
 	public String deleteProduct(@PathVariable int id) {
