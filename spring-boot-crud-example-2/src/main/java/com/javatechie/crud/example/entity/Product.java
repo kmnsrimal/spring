@@ -31,31 +31,43 @@ public class Product {
 	private double price;
 	public Integer getId() {
 		// TODO Auto-generated method stub
+		System.out.println(id);
 		return id;
 	}
-	public Object getName() {
+	
+	public void setId(int id) {
+		this.id = id;
+		System.out.println(id);
+	}
+	public String getName() {
 		// TODO Auto-generated method stub
+		System.out.println(name);
 		return name;
 	}
-	public void setName(Object name2) {
+	public void setName(String name){
 		// TODO Auto-generated method stub
-		
+		this.name = name;
+		System.out.println(name);
 	}
-	public Object getQuentity() {
+	public int getQuentity() {
 		// TODO Auto-generated method stub
+		System.out.println(quentity);
 		return quentity;
 	}
-	public void setQuantity(Object quentity2) {
+	public void setQuantity(int quentity) {
 		// TODO Auto-generated method stub
-		
+		this.quentity = quentity;
+		System.out.println(quentity);
 	}
-	public Object getPrice() {
+	public Double getPrice() {
 		// TODO Auto-generated method stub
+		System.out.println(price);
 		return price;
 	}
-	public void setPrice(Object price2) {
+	public void setPrice(Double price) {
 		// TODO Auto-generated method stub
-		
+		this.price = price;
+		System.out.println(price);
 	}
 	public void addAttribute(String string, List<Product> listProducts) {
 		// TODO Auto-generated method stub
