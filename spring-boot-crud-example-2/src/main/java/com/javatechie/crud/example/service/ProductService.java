@@ -63,10 +63,10 @@ public class ProductService {
 //		return 	repository.listAll(products);
 //		}
 
-//	public List<Product> listAll() {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
+	public List<Product> listAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 

@@ -14,10 +14,10 @@
      <div class="top-bar clearfix ">
            <div class="top-bar-links">
                 <ul>
-                      <li><a href="#home">Home</a></li>
-                      <li><a>Product </a></li>
-                      <li><a href="#contact">Contact</a></li>
-                      <li><a href="#about">About</a></li>
+                      <li><a th:href="@{home}">Home</a></li>
+                      <li><a th:href= "@{productpage}">ProductPage </a></li>
+                      <li><a th:href="@{contact}">Contact</a></li>
+                      <li><a th:href="@{about}">About</a></li>
                </ul>
            </div>
            
@@ -32,6 +32,20 @@
 
 </div>
 
+<div class = "form">
+
+<form action="/action_page.php">
+  <label for="id">ID:</label>
+  <input type="text" id="id" name="id"><br><br>
+  <label for="name"> name:</label>
+  <input type="text" id="name" name="name"><br><br>
+  <label for="quentity"> quentity:</label>
+  <input type="text" id="quentity" name="quentity"><br><br>
+  <label for="price"> price:</label>
+  <input type="text" id="price" name="price"><br><br>
+  <input type="submit" value="Submit">
+</form>
+</div>
 
 
 

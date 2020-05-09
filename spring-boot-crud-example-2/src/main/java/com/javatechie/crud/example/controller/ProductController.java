@@ -31,21 +31,17 @@ public class ProductController {
 	@Autowired
 	private  ProductService service;
 	
-	 @RequestMapping(value = "/index")
-	   public String index() {
-	      return "index";
-	   }
 	
+	public class Home {
+	    @RequestMapping("/")
+	    public String getHomepage() {
+	        return "a";
+	    }
+	    
+	    
+	}    
+
 	
-	 
-//	@RequestMapping("/")
-//	public String viewHomePage(Model model) {
-////		List<Product>listProducts = service.listAll();
-//		model.addAttribute(model);
-//		
-//		return "Newindex";
-//	}
-//	
 	@PostMapping("/addProduct")
 	public Product addProduct(@RequestBody Product product) {
 		System.out.println("product");
