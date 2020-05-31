@@ -35,7 +35,7 @@ public class ProductController {
 	public class Home {
 	    @RequestMapping("/")
 	    public String getHomepage() {
-	        return "a";
+	        return "index";
 	    }
 	    
 	    
