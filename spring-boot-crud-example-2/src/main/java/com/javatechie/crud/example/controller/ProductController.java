@@ -42,9 +42,9 @@ public class ProductController {
 	}
 	
 	public class Product{
-	 @RequestMapping("/Product")
+	 @RequestMapping("/product")
 	    public String getProductpage() {
-	        return "product";
+	        return "productpage";
 	    }	
 	}
 
