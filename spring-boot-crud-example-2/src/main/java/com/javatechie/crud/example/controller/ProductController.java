@@ -41,12 +41,7 @@ public class ProductController {
 	    
 	}
 	
-	public class Product{
-	 @RequestMapping("/product")
-	    public String getProductpage() {
-	        return "productpage";
-	    }	
-	}
+	
 
 	
 	@PostMapping("/addProduct")
